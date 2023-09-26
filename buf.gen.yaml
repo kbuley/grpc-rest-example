@@ -1,0 +1,14 @@
+version: v1
+plugins:
+  - plugin: go
+    out: pkg/api/v1
+  - plugin: go-grpc
+    out: pkg/api/v1
+  - plugin: grpc-gateway
+    out: pkg/api/v1
+    opt:
+      - logtostderr=true
+  - plugin: openapiv2
+    out: pkg/api/v1
+    opt:
+      - logtostderr=true
