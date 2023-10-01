@@ -1,14 +1,20 @@
 version: v1
 plugins:
   - plugin: go
-    out: pkg/api/v1
+    out: .
+    opt:
+      - module=github.com/kbuley/grpc-rest-example
   - plugin: go-grpc
-    out: pkg/api/v1
+    out: .
+    opt:
+      - module=github.com/kbuley/grpc-rest-example
   - plugin: grpc-gateway
-    out: pkg/api/v1
+    out: .
     opt:
       - logtostderr=true
+      - module=github.com/kbuley/grpc-rest-example
   - plugin: openapiv2
-    out: pkg/api/v1
+    out: pkg/api
     opt:
       - logtostderr=true
+#      - module=github.com/kbuley/grpc-rest-example

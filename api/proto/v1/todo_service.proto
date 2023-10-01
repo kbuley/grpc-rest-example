@@ -1,7 +1,7 @@
 syntax = "proto3";
 package v1;
-//option go_package = "github.com/kbuley/grpc-rest-example;v1";
-option go_package = "./;v1";
+
+option go_package = "github.com/kbuley/grpc-rest-example/pkg/api/v1";
 
 import "google/protobuf/timestamp.proto";
 import "google/api/annotations.proto";
